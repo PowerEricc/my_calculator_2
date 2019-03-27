@@ -7,10 +7,12 @@ botones.innerHTML = `
 <button class="btn btn-info" id="x2" >x^2</button>
 <button class="btn btn-secondary" id="inversa" >1/x</button>
 <button class="btn btn-warning" id="x4" >x^4</button>
+<button class="btn btn-success" id="seno" >sin</button>
 `;
 var cube = document.getElementById('cube');
 var x4 = document.getElementById('x4');
 
+var seno = document.getElementById('seno');
 cube.addEventListener('click', cube =>
 {
       resultado.innerHTML = `<h1>El resultado de ${num.value} <span class="text-danger"><strong>x^3</strong></span> es: <span class="alert alert-success">${Math.pow(num.value, 3)}</span></h1>`;
@@ -27,4 +29,9 @@ inversa.addEventListener('click', () =>
 x4.addEventListener('click', x4 =>
 {
       resultado.innerHTML = `<h1>El resultado de ${num.value} <span class="text-warning"><strong>x^4</strong></span> es: <span class="alert alert-success">${Math.pow(num.value, 4)}</span></h1>`;
+});
+
+seno.addEventListener('click', seno =>
+{
+      resultado.innerHTML = `<h1>El <span class="text-success"><strong>seno</strong></span> de ${num.value} es: <span class="alert alert-success">${Math.sin(num.value)}</span></h1>`;
 });
